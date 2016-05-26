@@ -6,5 +6,5 @@
   <include file="$(find nav_test)/launch/fake_move_base.launch" />
 
   <!-- Run a static transform between /odom and /map -->
-  <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 1000" />
+  <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
 </launch>

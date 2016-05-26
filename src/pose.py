@@ -1,9 +1,4 @@
 #!/usr/bin/env python
-
-'''
-Display current pose of xiaoqiang.
-'''
-
 import rospy
 from visualization_msgs.msg import Marker
 from nav_msgs.msg import Odometry

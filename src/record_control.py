@@ -8,19 +8,23 @@
 
 import rospy
 from geometry_msgs.msg import Pose
+import thread
+import sys, os
 import signal
 import json
 
 recorded_path = []
 is_recording = False
 
-def quit():
+def signal_handler(signal, frame):
     global recorded_path
-    print("Saving path record to /home/randoms/slamdb/path.json")
-    path_file = open("/home/randoms/slamdb/path.json", "w+")
+    print("Saving path record to /home/xiaoqiang/slamdb/path.json")
+    path_file = open("/home/xiaoqiang/slamdb/path.json", "w+")
     path_file.write(json.dumps(recorded_path, indent=4))
     path_file.close()
     print("Bye.")
+
+signal.signal(signal.SIGINT, signal_handler)
 
 
 rospy.init_node('nav_record_control', anonymous=True)
@@ -38,14 +42,10 @@ def add_record(pose):
 
 rospy.Subscriber("/ORB_SLAM/Camera", Pose , add_record)
 
-print("press ENTER to start recording, q to quit.")
 while not rospy.is_shutdown():
-    cmd = raw_input()
+    raw_input()
     is_recording = not is_recording
     if is_recording:
         print("start recording")
     else:
         print("recording paused")
-    if cmd == "q":
-        quit()
-
