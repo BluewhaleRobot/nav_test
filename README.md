@@ -5,6 +5,8 @@ some tools in remote control and navigation of xiaoqiang. The function of each t
 ```
 cd ~/Documents/ros/src
 git clone https://github.com/BlueWhaleRobot/nav_test.git 
+cd ..
+catkin_make
 ```
 ####2.remote control xiaoqiang by keboard direction keys (use space key to stop it) 
 ```
@@ -21,6 +23,8 @@ rosrun nav_test control.py
 ```
 cd ~/Documents/ros/src
 git clone https://github.com/BlueWhaleRobot/nav_test.git 
+cd ..
+catkin_make
 ```
 ###2.用键盘方向键远程控制小强移动（留意空格是停止）    
 ```
