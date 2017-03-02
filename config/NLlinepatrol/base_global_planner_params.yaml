@@ -1,6 +1,10 @@
 NLlinepatrolPlanner:
     DumpFileName: AnnDump.sav
     strTFParsFile: TFSettings.txt
+<<<<<<< HEAD
     TxtFileName: path.csv
+=======
+    TxtFileName: nav1.csv
+>>>>>>> 952adb4fb68503a51ab061424d3501fa810a31e2
     ANN_Dump_Bool: false
     connect_distance: 0.3
