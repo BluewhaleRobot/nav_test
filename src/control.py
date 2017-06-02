@@ -50,13 +50,13 @@ def sendCmd(key):
     cmd.linear.x = 0
     cmd.angular.z = 0
     if key == "up":
-        cmd.linear.x = 0.3
+        cmd.linear.x = 0.5
     elif key == "down":
-        cmd.linear.x = -0.3
+        cmd.linear.x = -0.5
     elif key == "left":
-        cmd.angular.z = 0.5
+        cmd.angular.z = 0.40
     elif key == "right":
-        cmd.angular.z = -0.5
+        cmd.angular.z = -0.40
     cmd_pub.publish(cmd)
 
 def get_current_key():

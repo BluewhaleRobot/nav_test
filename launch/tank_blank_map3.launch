@@ -1,0 +1,26 @@
+<launch>
+  <include file="$(find orb_slam2)/launch/run.launch" />
+  <node pkg="system_monitor" type="odom_combined.py" name="odomServ" >
+    <param name="enableMoveFlag" value="true"/>
+  </node>
+
+  <!-- Run the map server with a blank map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find nav_test)/maps/tank.yaml"/>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_global_planner" value="NLlinepatrol_planner/NLlinepatrolPlanner"/>
+    <param name="base_local_planner" value="addwa_local_planner/ADDWAPlannerROS"/>
+    <rosparam file="$(find nav_test)/config/tank3/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find nav_test)/config/tank3/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find nav_test)/config/tank3/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank3/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank3/base_local_planner_params2.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank3/base_global_planner_params.yaml" command="load" />
+    <remap from="/odom" to="/odom_combined" />
+  </node>
+
+  <!-- Run a static transform between /odom and /map -->
+  <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 1 /odom_combined /map 20" />
+  <node pkg="system_monitor" type="navGuide.py" name="navPub" />
+
+</launch>

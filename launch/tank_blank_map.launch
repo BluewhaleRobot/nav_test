@@ -1,0 +1,13 @@
+<launch>
+
+
+  <remap from="/odom" to="/odom_combined" />
+  <!-- Run the map server with a blank map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find nav_test)/maps/tank.yaml"/>
+
+  <include file="$(find nav_test)/launch/tank_move_base.launch" />
+
+  <!-- Run a static transform between /odom and /map -->
+  <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 1 /odom_combined /map 20" />
+
+</launch>

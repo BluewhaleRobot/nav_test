@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find orb_slam2)/launch/run.launch" />
+  <node pkg="system_monitor" type="odom_combined.py" name="odomServ" >
+    <param name="enableMoveFlag" value="false"/>
+  </node>
+  <!-- Run a static transform between /odom and /map -->
+  <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /odom_combined /map 20" />
+
+</launch>

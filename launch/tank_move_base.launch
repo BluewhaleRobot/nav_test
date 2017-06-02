@@ -1,0 +1,14 @@
+<launch>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_global_planner" value="NLlinepatrol_planner/NLlinepatrolPlanner"/>
+    <param name="base_local_planner" value="addwa_local_planner/ADDWAPlannerROS"/>
+    <rosparam file="$(find nav_test)/config/tank/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find nav_test)/config/tank/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find nav_test)/config/tank/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank/base_local_planner_params2.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/tank/base_global_planner_params.yaml" command="load" />
+  </node>
+
+</launch>
