@@ -101,11 +101,11 @@ ADDWAPlannerROS:
     vtheta_samples: 20
 
 
-    path_distance_bias: 0.2
+    path_distance_bias: 0.3
     goal_distance_bias: 8.0
     front_distance_bias: 1.0
     occdist_scale: 0.01
-    forward_point_distance: 0.325
+    forward_point_distance: 0.8
     stop_time_buffer: 0.2
     scaling_speed: 0.25
     max_scaling_factor: 0.2
