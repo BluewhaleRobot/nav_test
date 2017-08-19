@@ -135,6 +135,13 @@ ADDWAPlannerROS:
     decay_value: 15
     add_value: 20
 
+    distance_scale: 3.14
+    path_costheta: -0.5 #120 degree
+    forward_dist: 0.2
+    forward_width: 0.4
+    PathChange: true
+    PathChangeLazy: true
+
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
