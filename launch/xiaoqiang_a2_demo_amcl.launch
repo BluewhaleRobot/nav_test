@@ -5,7 +5,7 @@
   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
   <include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>
 
-  <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE 
+  <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE
        Can also be overridden on the command line -->
   <arg name="map" default="work0.yaml" />
 
@@ -17,5 +17,5 @@
 
   <!-- Fire up AMCL -->
   <include file="$(find nav_test)/launch/xiaoqiang_a2_amcl.launch" />
-  
+
 </launch>
