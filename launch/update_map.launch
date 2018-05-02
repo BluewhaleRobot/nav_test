@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find ORB_SLAM2)/launch/update.launch" />
+  <node pkg="system_monitor" type="odom2map.py" name="odomServ" >
+    <param name="enableMoveFlag" value="true"/>
+  </node>
+</launch>
