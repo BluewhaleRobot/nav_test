@@ -139,7 +139,7 @@ ADDWAPlannerROS:
     path_costheta: -0.5 #120 degree
     forward_dist: 0.2
     forward_width: 0.4
-    PathChange: false
+    PathChange: true
     PathChangeLazy: true
 
 
