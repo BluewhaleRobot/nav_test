@@ -92,7 +92,7 @@ ADDWAPlannerROS:
     min_rot_vel: -0.3
 
     yaw_goal_tolerance: 6.28
-    xy_goal_tolerance: 0.10
+    xy_goal_tolerance: 0.1
     latch_xy_goal_tolerance: true
     sim_time: 2.0
     sim_granularity: 0.05
@@ -117,7 +117,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R: [1., 0., 0., 0., 1., 0., 0., 0., 1.0]
     # transform trasition vector
-    T: [-0.1,0.,0.]
+    T: [0.15,0.,0.]
     # localgridmap cell size
     resolution: 0.05
     # localgridmap half cells num of echo side
@@ -137,9 +137,9 @@ ADDWAPlannerROS:
 
     distance_scale: 3.14
     path_costheta: -0.5 #120 degree
-    forward_dist: 0.2
+    forward_dist: 0.4
     forward_width: 0.4
-    PathChange: true
+    PathChange: false
     PathChangeLazy: true
 
 
