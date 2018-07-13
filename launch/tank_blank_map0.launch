@@ -20,5 +20,9 @@
     <remap from="/cmd_vel" to="/cmd_vel_nav" />
   </node>
 
+  <!-- 设为０关闭底盘红外，设为１启动底盘红外-->
+  <node pkg="nav_test" type="barDetectChanger.py" name="barDetectChanger_node">
+    <param name="barDetectFlag" value="0"/>
+  </node>
 
 </launch>

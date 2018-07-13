@@ -8,5 +8,8 @@
     <rosparam file="$(find nav_test)/config/xiaoqiang/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find nav_test)/config/xiaoqiang/base_local_planner_params.yaml" command="load" />
   </node>
-  
+  <!-- 设为０关闭底盘红外，设为１启动底盘红外-->
+  <node pkg="nav_test" type="barDetectChanger.py" name="barDetectChanger_node">
+    <param name="barDetectFlag" value="0"/>
+  </node>
 </launch>
