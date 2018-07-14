@@ -1,6 +1,6 @@
 <launch>
   <include file="$(find ORB_SLAM2)/launch/update.launch" />
-  <node pkg="system_monitor" type="getORBtrack.py" name="odomServ" >
+  <node pkg="system_monitor" type="orb_track.py" name="odomServ" >
     <param name="enableMoveFlag" value="true"/>
   </node>
 </launch>
