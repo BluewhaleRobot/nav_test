@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Grid1
         - /Map1
         - /Local Plan1
         - /Global Plan1
@@ -14,7 +15,7 @@ Panels:
         - /Inflated Obstacles1
         - /Odometry2
       Splitter Ratio: 0.652661026
-    Tree Height: 820
+    Tree Height: 799
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -37,7 +38,7 @@ Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.600000024
-      Cell Size: 1
+      Cell Size: 0.100000001
       Class: rviz/Grid
       Color: 25; 25; 26
       Enabled: true
@@ -71,7 +72,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 100
       Name: Odometry
       Position Tolerance: 0.100000001
@@ -87,7 +88,7 @@ Visualization Manager:
         Value: Arrow
       Topic: /odom
       Unreliable: false
-      Value: true
+      Value: false
     - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
@@ -142,7 +143,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        kinect_link:
+        kinect_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -298,7 +299,7 @@ Visualization Manager:
       Draw Behind: false
       Enabled: true
       Name: Inflated Obstacles
-      Topic: /move_base/local_costmap/costmap
+      Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Use Timestamp: false
       Value: true
@@ -335,7 +336,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: false
-      Enabled: true
+      Enabled: false
       Keep: 100
       Name: Odometry
       Position Tolerance: 0.0500000007
@@ -351,17 +352,17 @@ Visualization Manager:
         Value: Arrow
       Topic: /xqserial_server/Odom
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 0.699999988
       Class: rviz/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic: /move_base/global_costmap/costmap
       Unreliable: false
       Use Timestamp: false
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
@@ -382,15 +383,15 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 10.7724419
+      Distance: 11.1001806
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -1.89320111
-        Y: -0.412936807
+        X: -4.42864943
+        Y: -2.47784281
         Z: -8.31768006e-08
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
@@ -400,7 +401,7 @@ Visualization Manager:
       Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: XYOrbit (rviz)
-      Yaw: 3.46675825
+      Yaw: 2.87675548
     Saved: ~
 Window Geometry:
   Displays:
@@ -408,7 +409,7 @@ Window Geometry:
   Height: 1032
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000016f000003c2fc0200000006fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005e00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001c400000198000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000003c2000000d000fffffffb0000000a0049006d00610067006501000003ce0000001c0000000000000000000000010000010f00000209fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000209000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a00000030000fffffffb0000000800540069006d00650100000000000004500000000000000000000005da000003c200000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000016f000003bafc0200000006fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006200fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001c400000198000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000002a000003ba000000d900fffffffb0000000a0049006d00610067006501000003c80000001c0000000000000000000000010000010f00000209fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000209000000ba00fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a00000031800fffffffb0000000800540069006d00650100000000000004500000000000000000000005da000003ba00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
