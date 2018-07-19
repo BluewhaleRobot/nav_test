@@ -18,7 +18,7 @@
   <!-- Fire up AMCL -->
   <include file="$(find nav_test)/launch/xiaoqiang_a2_amcl.launch" />
   <!-- 设为０关闭底盘红外，设为１启动底盘红外-->
-  <node pkg="nav_test" type="barDetectChanger.py" name="barDetectChanger_node">
+  <node pkg="nav_test" type="barDetectChanger.py" name="bar_detect_changer_node">
     <param name="barDetectFlag" value="0"/>
   </node>
 </launch>
