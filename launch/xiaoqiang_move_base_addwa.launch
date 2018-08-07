@@ -1,0 +1,20 @@
+<launch>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_global_planner" value="navfn/NavfnROS"/>
+    <param name="base_local_planner" value="addwa_local_planner/ADDWAPlannerROS"/>
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/base_local_planner_params2.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find nav_test)/config/xiaoqiang_addwa/navfn_global_planner_params.yaml" command="load" />
+    <!-- <remap from="/cmd_vel" to="/cmd_vel_nav" /> -->
+    <remap from="/odom" to="/xqserial_server/Odom" />
+  </node>
+  <!-- 设为０关闭底盘红外，设为１启动底盘红外-->
+  <node pkg="nav_test" type="barDetectChanger.py" name="barDetectChanger_node">
+    <param name="barDetectFlag" value="0"/>
+  </node>
+</launch>

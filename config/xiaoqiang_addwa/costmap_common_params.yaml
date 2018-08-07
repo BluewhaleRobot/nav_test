@@ -1,5 +1,5 @@
-footprint: [ [-0.35, -0.25], [0.2, -0.25], [0.2, 0.25], [-0.35, 0.25] ]
-robot_radius: 0.4
+footprint: [ [-0.3, -0.15], [0.10, -0.15], [0.10, 0.15], [-0.3, 0.15] ]
+robot_radius: 0.3
 # footprint_padding: 0.1
 
 # inflation_radius: 0.5
@@ -12,25 +12,11 @@ max_obstacle_height: 0.60  # assume something like an arm is mounted on top of t
 
 map_type: costmap
 
-obstacle_layer:
-  observation_sources:  scan
-  scan:
-    data_type: LaserScan
-    topic:  /scan_filtered
-    marking: true
-    clearing: true
-    min_obstacle_height: 0.0
-    max_obstacle_height: 0.6
-    inf_is_valid: true
-    expected_update_rate: 0.3
-    obstacle_range: 8.0
-    raytrace_range: 8.0
-
 #cost_scaling_factor and inflation_radius were now moved to the inflation_layer ns
 inflation_layer:
   enabled:              true
   cost_scaling_factor:  5.0  # exponential rate at which the obstacle cost drops off (default: 10)
-  inflation_radius:     0.5  # max. distance from an obstacle at which costs are incurred for planning paths.
+  inflation_radius:     0.3  # max. distance from an obstacle at which costs are incurred for planning paths.
 
 static_layer:
   enabled:              true
