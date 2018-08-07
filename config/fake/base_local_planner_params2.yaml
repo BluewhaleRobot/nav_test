@@ -77,6 +77,7 @@
 controller_frequency: 15.0
 recovery_behavior_enabled: false
 clearing_rotation_allowed: false
+latch_xy_goal_tolerance: true
 
 ADDWAPlannerROS:
     acc_lim_x: 1.5
@@ -130,7 +131,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [-0.3,0.]
+    T_laserscan: [0,0.]
 
     decay_value: 15
     add_value: 20
