@@ -77,23 +77,24 @@
 controller_frequency: 15.0
 recovery_behavior_enabled: false
 clearing_rotation_allowed: false
+latch_xy_goal_tolerance: true
 
 ADDWAPlannerROS:
-    acc_lim_x: 3.0
+    acc_lim_x: 1.5
     acc_lim_y: 0
-    acc_lim_th: 3.6
+    acc_lim_th: 8
     max_trans_vel: 0.5
     min_trans_vel: 0.1
     max_vel_x: 0.5
     min_vel_x: 0.1
     max_vel_y: 0
     min_vel_y: 0
-    max_rot_vel: 0.3
-    min_rot_vel: -0.3
+    max_rot_vel: 0.7
+    min_rot_vel: -0.7
 
     yaw_goal_tolerance: 6.28
-    xy_goal_tolerance: 0.10
-    latch_xy_goal_tolerance: true
+    xy_goal_tolerance: 0.1
+
     sim_time: 2.0
     sim_granularity: 0.05
     vx_samples: 20
@@ -101,9 +102,9 @@ ADDWAPlannerROS:
     vtheta_samples: 20
 
 
-    path_distance_bias: 0.2
-    goal_distance_bias: 8.0
-    front_distance_bias: 1.0
+    path_distance_bias: 0.8
+    goal_distance_bias: 10.0
+    front_distance_bias: 10.0
     occdist_scale: 0.01
     forward_point_distance: 0.325
     stop_time_buffer: 0.2
@@ -117,31 +118,38 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R: [1., 0., 0., 0., 1., 0., 0., 0., 1.0]
     # transform trasition vector
-    T: [-0.1,0.,0.]
+    T: [0.0,0.,0.]
     # localgridmap cell size
     resolution: 0.05
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.4
+    bar_distance_min: 0.80
 
-    using_laserscan: false
+    using_laserscan: true
     #laserscan_topic: scan
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [-0.3,0.]
+    T_laserscan: [0.1,0.]
 
     decay_value: 15
     add_value: 20
 
     distance_scale: 3.14
     path_costheta: -0.5 #120 degree
-    forward_dist: 0.2
-    forward_width: 0.4
-    PathChange: true
+    forward_dist: 0.15
+    forward_width: 0.7
+    PathChange: false
     PathChangeLazy: true
 
+    look_ahead_dist: 0.8
+    theta_max: 0.7
+    linear_v: 0.5
+    k2: 0.8
+    kp: 1.6
+    ki: 0.0
+    kd: 0.0
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
