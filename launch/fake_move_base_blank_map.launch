@@ -5,8 +5,6 @@
 
   <include file="$(find nav_test)/launch/fake_move_base.launch" />
   
-  <node pkg="tf" type="static_transform_publisher" name="laserlink_broadcaster" args="0.1 0 0.3 3.1415926 0 0  base_link  laser 100"/>
-  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
   <!-- Run a static transform between /odom and /map -->
   <node pkg="tf" type="static_transform_publisher" name="odom_map_broadcaster" args="0 0 0 0 0 0 /map /odom 20" />
 </launch>

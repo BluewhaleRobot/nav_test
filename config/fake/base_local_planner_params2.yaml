@@ -94,6 +94,7 @@ ADDWAPlannerROS:
 
     yaw_goal_tolerance: 0.1
     xy_goal_tolerance: 0.1
+    latch_xy_goal_tolerance: true
 
     sim_time: 2.0
     sim_granularity: 0.05
@@ -126,7 +127,7 @@ ADDWAPlannerROS:
     # the min distance between base_footprint and bar
     bar_distance_min: 0.70
 
-    using_laserscan: true
+    using_laserscan: false
     #laserscan_topic: scan
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
