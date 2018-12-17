@@ -102,7 +102,7 @@ ADDWAPlannerROS:
     vtheta_samples: 20
 
 
-    path_distance_bias: 0.4
+    path_distance_bias: 0.8
     goal_distance_bias: 10.0
     front_distance_bias: 10.0
     occdist_scale: 0.01
@@ -143,9 +143,9 @@ ADDWAPlannerROS:
     PathChange: false
     PathChangeLazy: true
 
-    look_ahead_dist: 0.4
+    look_ahead_dist: 0.8
     theta_max: 0.5
-    linear_v: 0.4
+    linear_v: 0.8
     k2: 0.8
     kp: 0.8
     ki: 0.0
