@@ -123,7 +123,7 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.4
+    bar_distance_min: 0.45
 
     using_laserscan: false
     #laserscan_topic: scan
@@ -139,7 +139,7 @@ ADDWAPlannerROS:
     path_costheta: -0.5 #120 degree
     forward_dist: 0.2
     forward_width: 0.4
-    PathChange: true
+    PathChange: false
     PathChangeLazy: true
 
 
