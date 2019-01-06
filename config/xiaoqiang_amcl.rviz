@@ -6,13 +6,14 @@ Panels:
       Expanded:
         - /Global Options1
         - /Odometry1
+        - /Odometry1/Shape1
         - /Local Plan1
         - /Global Plan1
         - /Marker1/Namespaces1
         - /LaserScan1
         - /LaserScan1/Status1
         - /Inflated Obstacles1
-      Splitter Ratio: 0.652661026
+      Splitter Ratio: 0.77929157
     Tree Height: 823
   - Class: rviz/Selection
     Name: Selection
@@ -31,7 +32,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Visualization Manager:
   Class: ""
   Displays:
@@ -81,7 +82,7 @@ Visualization Manager:
         Color: 255; 25; 0
         Head Length: 0.300000012
         Head Radius: 0.100000001
-        Shaft Length: 1
+        Shaft Length: 0.300000012
         Shaft Radius: 0.0500000007
         Value: Arrow
       Topic: /xqserial_server/Odom
@@ -337,25 +338,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 14.5293674
+      Distance: 8.03806782
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -2.01635981
-        Y: 0.936222315
-        Z: -8.31768006e-08
+        X: -3.08862662
+        Y: -3.60836959
+        Z: 8.02305476e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.49979639
+      Pitch: 1.01979685
       Target Frame: <Fixed Frame>
       Value: XYOrbit (rviz)
-      Yaw: 2.69176102
+      Yaw: 2.51175427
     Saved: ~
 Window Geometry:
   Displays:

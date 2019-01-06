@@ -1,0 +1,19 @@
+
+<launch>
+
+  <param name="use_sim_time" value="false" />
+  <include file="$(find pavo_ros)/launch/xiaoqiang.launch" />
+  <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE
+       Can also be overridden on the command line -->
+  <arg name="map" default="work0.yaml" />
+
+  <!-- Run the map server with the desired map -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find nav_test)/maps/$(arg map)"/>
+
+  <!-- Start move_base  -->
+  <include file="$(find nav_test)/launch/xiaoqiang_move_base_pavo.launch" />
+
+  <!-- Fire up AMCL -->
+  <include file="$(find nav_test)/launch/xiaoqiang_pavo_amcl.launch" />
+
+</launch>
