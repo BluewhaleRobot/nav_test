@@ -1,6 +1,6 @@
 
 <launch>
-
+  <remap from="/odom" to="/xqserial_server/Odom" />
   <param name="use_sim_time" value="false" />
   <include file="$(find pavo_ros)/launch/xiaoqiang.launch" />
   <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE
