@@ -1,0 +1,5 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/xiaoqiang/Documents/ros/devel/lib/python2.7/dist-packages"
+    ]
+}

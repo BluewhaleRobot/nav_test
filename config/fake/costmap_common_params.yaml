@@ -5,3 +5,4 @@ robot_radius: 0.15
 inflation_radius: 0.55
 max_obstacle_height: 0.6
 min_obstacle_height: 0.0
+# plugins: []

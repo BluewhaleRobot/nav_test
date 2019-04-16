@@ -2,9 +2,9 @@
 <launch>
 
   <param name="use_sim_time" value="false" />
-  <node pkg="tf" type="static_transform_publisher" name="laserlink_broadcaster" args="-0.25 0 0.3 3.1415926 0 0  base_link  laser 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="laserlink_broadcaster" args="0.085 0 0.03 3.1415926 0 0  base_link  laser 100"/>
   <include file="$(find rplidar_ros)/launch/rplidar_a3.launch" />
-  <include file="$(find laser_filters)/examples/shadow_filter_a2.launch"/>
+  <include file="$(find laser_filters)/examples/shadow_filter_a3.launch"/>
 
   <!-- EDIT THIS LINE TO REFLECT THE NAME OF YOUR OWN MAP FILE 
        Can also be overridden on the command line -->
