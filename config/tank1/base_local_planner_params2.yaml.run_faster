@@ -103,7 +103,7 @@ ADDWAPlannerROS:
     vtheta_samples: 20
 
 
-    path_distance_bias: 0.4
+    path_distance_bias: 0.8
     goal_distance_bias: 10.0
     front_distance_bias: 10.0
     occdist_scale: 0.01
@@ -125,7 +125,7 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.6
+    bar_distance_min: 0.7
 
     using_laserscan: true
     #laserscan_topic: scan
@@ -144,10 +144,10 @@ ADDWAPlannerROS:
     PathChange: false
     PathChangeLazy: true
 
-    look_ahead_dist: 0.4
+    look_ahead_dist: 0.8
     theta_max: 0.4
-    linear_v: 0.5
-    k2: 0.8
+    linear_v: 1.1
+    k2: 1.0
     kp: 1.0
     ki: 0.0
     kd: 0.0
