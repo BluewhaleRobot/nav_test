@@ -92,7 +92,7 @@ ADDWAPlannerROS:
     max_rot_vel: 0.7
     min_rot_vel: -0.7
 
-    yaw_goal_tolerance: 6.28
+    yaw_goal_tolerance: 0.087
     xy_goal_tolerance: 0.1
 
     sim_time: 2.0
