@@ -140,6 +140,9 @@ ADDWAPlannerROS:
     path_costheta: -0.5 #120 degree
     forward_dist: 0.15
     forward_width: 0.4
+    rot_width: 0.4  #rot_flag
+    plan_width: 0.4 #plan needed free radius
+    forward_max_dist: 1.5 #the largest distance begin to check
     PathChange: false
     PathChangeLazy: true
 
