@@ -43,7 +43,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R: [1., 0., 0., 0., 1., 0., 0., 0., 1.0]
     # transform trasition vector
-    T: [0.0,0.,0.]
+    T: [-0.1,0.,0.]
     # localgridmap cell size
     resolution: 0.05
     # localgridmap half cells num of echo side
@@ -56,7 +56,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [0.25,0.]
+    T_laserscan: [-0.3,0.]
 
     decay_value: 15
     add_value: 20
@@ -65,6 +65,8 @@ ADDWAPlannerROS:
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
     forward_width: 0.45
+    rot_width: 0.5
+    plan_width: 0.45
     PathChange: false
     PathChangeLazy: true
 
@@ -72,6 +74,6 @@ ADDWAPlannerROS:
     theta_max: 0.4
     linear_v: 0.5
     k2: 0.8
-    kp: 1.0
-    ki: 0.0
-    kd: 0.0
+    kp: 0.6
+    ki: 0.5
+    kd: 0.8
