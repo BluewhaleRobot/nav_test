@@ -6,14 +6,13 @@ Panels:
       Expanded:
         - /Global Options1
         - /Odometry1
-        - /Odometry1/Shape1
         - /Local Plan1
         - /Global Plan1
         - /Marker1/Namespaces1
         - /LaserScan1
         - /LaserScan1/Status1
-        - /Inflated Obstacles1
-      Splitter Ratio: 0.77929157
+        - /Inflated Obstacles2
+      Splitter Ratio: 0.652661026
     Tree Height: 823
   - Class: rviz/Selection
     Name: Selection
@@ -32,7 +31,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Visualization Manager:
   Class: ""
   Displays:
@@ -82,7 +81,7 @@ Visualization Manager:
         Color: 255; 25; 0
         Head Length: 0.300000012
         Head Radius: 0.100000001
-        Shaft Length: 0.300000012
+        Shaft Length: 1
         Shaft Radius: 0.0500000007
         Value: Arrow
       Topic: /xqserial_server/Odom
@@ -318,6 +317,16 @@ Visualization Manager:
       Topic: ""
       Unreliable: false
       Value: false
+    - Alpha: 0.300000012
+      Class: rviz/Map
+      Color Scheme: costmap
+      Draw Behind: false
+      Enabled: false
+      Name: Inflated Obstacles
+      Topic: /move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 0; 0; 0
@@ -338,25 +347,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 8.03806782
+      Distance: 13.2153826
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -3.08862662
-        Y: -3.60836959
-        Z: 8.02305476e-06
+        X: 0.514432609
+        Y: -1.58059049
+        Z: -4.14183614e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.01979685
+      Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: XYOrbit (rviz)
-      Yaw: 2.51175427
+      Yaw: 5.48676825
     Saved: ~
 Window Geometry:
   Displays:

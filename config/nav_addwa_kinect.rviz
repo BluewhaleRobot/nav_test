@@ -8,6 +8,7 @@ Panels:
         - /Grid1
         - /Odometry1
         - /Odometry1/Status1
+        - /Odometry1/Shape1
         - /Local Plan1
         - /Global Plan1
         - /Marker1/Namespaces1
@@ -74,7 +75,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: false
-      Enabled: false
+      Enabled: true
       Keep: 100
       Name: Odometry
       Position Tolerance: 0.0500000007
@@ -83,14 +84,14 @@ Visualization Manager:
         Axes Length: 1
         Axes Radius: 0.100000001
         Color: 255; 25; 0
-        Head Length: 0.300000012
-        Head Radius: 0.100000001
-        Shaft Length: 1
+        Head Length: 0.0500000007
+        Head Radius: 0.0500000007
+        Shaft Length: 0.0500000007
         Shaft Radius: 0.0500000007
         Value: Arrow
       Topic: /xqserial_server/Odom
       Unreliable: false
-      Value: false
+      Value: true
     - Angle Tolerance: 0.100000001
       Class: rviz/Odometry
       Covariance:
@@ -484,25 +485,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 16.3309307
+      Distance: 12.1081676
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.130123004
-        Y: -0.160620004
-        Z: -0.0800027996
+        X: -0.130229563
+        Y: -2.72582364
+        Z: -0.567765117
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.48479998
+      Pitch: 1.12980032
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.21542001
+      Yaw: 2.90041924
     Saved: ~
 Window Geometry:
   Displays:
