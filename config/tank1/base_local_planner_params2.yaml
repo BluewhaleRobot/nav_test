@@ -141,16 +141,18 @@ ADDWAPlannerROS:
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
     forward_width: 0.45
+    rot_width: 0.4
+    plan_width: 0.45
     PathChange: false
     PathChangeLazy: true
 
     look_ahead_dist: 0.4
     theta_max: 0.4
     linear_v: 0.5
-    k2: 0.8
-    kp: 1.0
+    k2: 1.2
+    kp: 0.8
     ki: 0.0
-    kd: 0.0
+    kd: 0.15
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
