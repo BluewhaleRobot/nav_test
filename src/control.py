@@ -36,6 +36,8 @@ upKey = [27, 91, 65]
 downKey = [27, 91, 66]
 leftKey = [27, 91, 68]
 rightKey = [27, 91, 67]
+deleteKey = [27, 91, 51, 126]
+pagedownKey = [27, 91, 54, 126]
 
 def update_speed(odom):
     global current_Odom
@@ -48,11 +50,16 @@ def sendCmd(key):
     cmd.linear.x = current_Odom.twist.twist.linear.x
     cmd.angular.z = current_Odom.twist.twist.angular.z
     cmd.linear.x = 0
+    cmd.linear.y = 0
     cmd.angular.z = 0
     if key == "up":
         cmd.linear.x = 0.3
     elif key == "down":
         cmd.linear.x = -0.3
+    if key == "delete":
+        cmd.linear.y = 0.3
+    elif key == "pagedown":
+        cmd.linear.y = -0.3
     elif key == "left":
         cmd.angular.z = 0.30
     elif key == "right":
@@ -72,13 +79,21 @@ def get_current_key():
                 keyCache.append(ord(c))
                 if keyCache == leftKey:
                     current_key = "left"
+                    keyCache = []
                 if keyCache == rightKey:
                     current_key = "right"
+                    keyCache = []
                 if keyCache == upKey:
                     current_key = "up"
+                    keyCache = []
                 if keyCache == downKey:
                     current_key = "down"
-                if len(keyCache) == 3:
+                    keyCache = []
+                if keyCache == deleteKey:
+                    current_key = "delete"
+                if keyCache == pagedownKey:
+                    current_key = "pagedown"
+                if len(keyCache) >= 4:
                     keyCache = []
             else:
                 current_key = c
