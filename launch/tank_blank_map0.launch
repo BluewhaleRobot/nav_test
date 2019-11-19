@@ -1,5 +1,6 @@
 <launch>
   <include file="$(find ORB_SLAM2)/launch/run_multi.launch" />
+  <include file="$(find realsense2_camera)/launch/rs_camera_xiaoqiang.launch" />
   <node pkg="system_monitor" type="orb_track.py" name="odomServ" >
     <param name="enableMoveFlag" value="true"/>
   </node>
@@ -19,5 +20,6 @@
     <remap from="/odom" to="/xqserial_server/Odom" />
     <remap from="/cmd_vel" to="/cmd_vel_nav" />
     <remap from="/scan" to="/scan_filtered" />
+    <remap from="/scan2" to="/backscan/scan" />
   </node>
 </launch>
