@@ -154,6 +154,14 @@ ADDWAPlannerROS:
     ki: 0.0
     kd: 1.0
 
+    bar_x_min: -1.05
+    bar_x_max: 0.0
+    bar_y1: 0.2
+    bar_y2: 0.5
+    R_laserscan2: [0., -1., 1., 0.]
+    T_laserscan2: [0.,0.]
+    path_theta_threshold: 0.35
+
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
 #   acc_lim_y: 1.2

@@ -92,8 +92,8 @@ ADDWAPlannerROS:
     max_rot_vel: 0.5
     min_rot_vel: -0.5
 
-    yaw_goal_tolerance: 0.1
-    xy_goal_tolerance: 0.1
+    yaw_goal_tolerance: 6.28
+    xy_goal_tolerance: 0.3
     latch_xy_goal_tolerance: true
 
     sim_time: 2.0
@@ -103,7 +103,7 @@ ADDWAPlannerROS:
     vtheta_samples: 20
 
 
-    path_distance_bias: 0.4
+    path_distance_bias: 0.8
     goal_distance_bias: 10.0
     front_distance_bias: 10.0
     occdist_scale: 0.01
@@ -132,25 +132,27 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [0.25,0.]
+    T_laserscan: [0.2,0.]
 
-    decay_value: 15
+    decay_value: 10
     add_value: 20
 
     distance_scale: 3.14
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
-    forward_width: 0.45
+    forward_width: 0.8
+    rot_width: 1.2
+    plan_width: 0.8
     PathChange: false
     PathChangeLazy: true
 
-    look_ahead_dist: 0.4
+    look_ahead_dist: 0.8
     theta_max: 0.4
-    linear_v: 0.4
-    k2: 0.4
-    kp: 1.0
+    linear_v: 0.3
+    k2: 0.3
+    kp: 0.4
     ki: 0.0
-    kd: 0.0
+    kd: 1.0
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
