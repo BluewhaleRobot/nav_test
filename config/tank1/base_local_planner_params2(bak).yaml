@@ -92,7 +92,7 @@ ADDWAPlannerROS:
     max_rot_vel: 0.5
     min_rot_vel: -0.5
 
-    yaw_goal_tolerance: 0.1
+    yaw_goal_tolerance: 0.07
     xy_goal_tolerance: 0.1
     latch_xy_goal_tolerance: true
 
@@ -125,32 +125,35 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.6
+    bar_distance_min: 0.5
 
     using_laserscan: true
     #laserscan_topic: scan
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [0.25,0.]
+    T_laserscan: [0.2,0.]
 
-    decay_value: 15
+    decay_value: 10
     add_value: 20
 
     distance_scale: 3.14
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
-    forward_width: 0.45
+    forward_width: 0.5
+    rot_width: 0.5
+    plan_width: 0.5
     PathChange: false
     PathChangeLazy: true
+    forward_max_dist: 1.0
 
     look_ahead_dist: 0.4
     theta_max: 0.4
-    linear_v: 0.4
-    k2: 0.4
-    kp: 1.0
-    ki: 0.0
-    kd: 0.0
+    linear_v: 0.5
+    k2: 0.8
+    kp: 0.6
+    ki: 0.5
+    kd: 0.5
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
