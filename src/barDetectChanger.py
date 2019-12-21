@@ -15,8 +15,8 @@ class BarDetectChanger:
         # 发布TWist消息控制机器人
         self.cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
         self.barDetectFlag_pub = rospy.Publisher('/barDetectFlag', Bool, queue_size=1)
-        if bar_disabled == 1 :
-            return
+        # if bar_disabled == 1 :
+        #     return
         rospy.loginfo("Stopping the robot...")
         # Stop the robot
         self.cmd_vel_pub.publish(Twist())
@@ -25,7 +25,10 @@ class BarDetectChanger:
         r = rospy.Rate(1) # 1hz
         while not rospy.is_shutdown():
             flag=Bool()
-            flag.data=False
+            if bar_disabled == 1:
+                flag.data = True
+            else:
+                flag.data=False
             self.barDetectFlag_pub.publish(flag) # disable BarDetectFlag
             r.sleep()
 
