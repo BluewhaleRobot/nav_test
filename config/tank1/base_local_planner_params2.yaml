@@ -146,10 +146,11 @@ ADDWAPlannerROS:
     PathChange: false
     PathChangeLazy: true
     forward_max_dist: 1.2
-    clear_angle1: -1.6
-    clear_angle12: 1.6
+    clear_angle1: 1.8
+    clear_angle2: 4.0
     clear_range: 2.0
-    clear_value: 5
+    clear_value: 2
+    scan_type: 1
 
     look_ahead_dist: 0.4
     theta_max: 0.4
