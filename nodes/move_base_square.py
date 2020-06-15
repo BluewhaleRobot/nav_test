@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """ move_base_square.py - Version 0.1 2012-01-10
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #coding:utf-8
 '''
 this script is designed for calculating the rotation matrix between kinect_depth_optical_frame and kinect_link_new.

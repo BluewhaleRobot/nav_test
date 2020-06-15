@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 """ calibrate_linear.py - Version 0.1 2012-03-24
 
