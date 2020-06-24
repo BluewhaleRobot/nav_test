@@ -124,7 +124,7 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.55
+    bar_distance_min: 0.6
 
     using_laserscan: true
     #laserscan_topic: scan
@@ -136,23 +136,30 @@ ADDWAPlannerROS:
     decay_value: 10
     add_value: 20
 
-    distance_scale: 3.14
+    distance_scale: 1.8
+    left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.15
-    forward_width: 0.4
-    rot_width: 0.4  #rot_flag
+    forward_width: 0.55
+    rot_width: 0.7  #rot_flag
     plan_width: 0.4 #plan needed free radius
     forward_max_dist: 1.5 #the largest distance begin to check
+    backtime: 2.0
     PathChange: false
     PathChangeLazy: true
+    clear_angle1: -1.6
+    clear_angle12: 1.6
+    clear_range: 2.0
+    clear_value: 5
+    scan_type: 0
 
     look_ahead_dist: 0.4
-    theta_max: 0.5
-    linear_v: 0.4
-    k2: 0.8
-    kp: 0.8
-    ki: 0.0
-    kd: 0.0
+    theta_max: 1.2
+    linear_v: 0.7
+    k2: 1.0
+    kp: 1.0
+    ki: 0.5 #0.5
+    kd: 0.3 #0.3
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
