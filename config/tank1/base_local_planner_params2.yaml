@@ -137,7 +137,7 @@ ADDWAPlannerROS:
     decay_value: 5
     add_value: 20
 
-    distance_scale: 3.14
+    distance_scale: 2.0
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
