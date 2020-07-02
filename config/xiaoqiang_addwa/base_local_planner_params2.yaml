@@ -82,14 +82,14 @@ ADDWAPlannerROS:
     acc_lim_x: 1.5
     acc_lim_y: 0
     acc_lim_th: 8
-    max_trans_vel: 0.4
-    min_trans_vel: 0.0
+    max_vel_trans: 0.4
+    min_vel_trans: 0.0
     max_vel_x: 0.4
     min_vel_x: 0.0
     max_vel_y: 0
     min_vel_y: 0
-    max_rot_vel: 0.5
-    min_rot_vel: -0.5
+    max_vel_theta: 0.5
+    min_vel_theta: -0.5
 
     yaw_goal_tolerance: 0.1
     xy_goal_tolerance: 0.1
