@@ -18,6 +18,7 @@
     <rosparam file="$(find nav_test)/config/tank1/base_global_planner_params.yaml" command="load" />
     <remap from="/odom" to="/xqserial_server/Odom" />
     <remap from="/cmd_vel" to="/cmd_vel_nav" />
+    <remap from="/scan" to="/scan_filtered" />
   </node>
 
   <!-- 设为０关闭底盘红外，设为１启动底盘红外-->

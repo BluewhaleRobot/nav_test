@@ -17,6 +17,7 @@
     <rosparam file="$(find nav_test)/config/tank2/base_local_planner_params2.yaml" command="load" />
     <rosparam file="$(find nav_test)/config/tank2/base_global_planner_params.yaml" command="load" />
     <remap from="/odom" to="/odom_combined" />
+    <remap from="/scan" to="/scan_filtered" />
   </node>
 
   <!-- Run a static transform between /odom and /map -->
