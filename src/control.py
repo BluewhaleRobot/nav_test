@@ -7,7 +7,7 @@
 import rospy
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
-import thread
+import threading
 import termios, fcntl, sys, os
 import signal
 def signal_handler(signal, frame):
@@ -85,7 +85,7 @@ def get_current_key():
         except:
             pass
 
-thread.start_new_thread(get_current_key, ())
+threading.Thread(target=get_current_key, args=()).start()
 
 rate = rospy.Rate(5)
 while not rospy.is_shutdown():
