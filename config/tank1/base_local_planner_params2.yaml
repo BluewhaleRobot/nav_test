@@ -124,7 +124,7 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.6
+    bar_distance_min: 0.7
     backtime: 2.0
 
     using_laserscan: true
@@ -143,7 +143,7 @@ ADDWAPlannerROS:
     forward_dist: 0.25
     forward_width: 0.5
     rot_width: 0.5
-    plan_width: 0.4
+    plan_width: 0.5
     PathChange: true
     PathChangeLazy: true
     forward_max_dist: 1.5
