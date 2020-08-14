@@ -157,7 +157,7 @@ ADDWAPlannerROS:
     look_ahead_dist: 0.4
     theta_max: 1.6
     linear_v: 0.7
-    k2: 1.4 #0.4
+    k2: 1.0 #0.4
     kp: 1.0 #0.6
     ki: 0.5 #0.5
     kd: 0.3 #0.5
