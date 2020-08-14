@@ -137,7 +137,7 @@ ADDWAPlannerROS:
     decay_value: 10
     add_value: 20
 
-    distance_scale: 3.14
+    distance_scale: 1.8
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
@@ -146,20 +146,21 @@ ADDWAPlannerROS:
     plan_width: 0.4
     PathChange: true
     PathChangeLazy: true
-    forward_max_dist: 1.5
+    forward_max_dist: 1.4
+    backtime: 2.0
     clear_angle1: 1.8
     clear_angle2: 4.0
     clear_range: 2.0
     clear_value: 2
     scan_type: 1
 
-    look_ahead_dist: 0.8
-    theta_max: 0.5
-    linear_v: 0.65
-    k2: 0.6 #0.4
-    kp: 0.8 #0.6
-    ki: 0.0 #0.5
-    kd: -0.1 #0.5
+    look_ahead_dist: 0.4
+    theta_max: 1.6
+    linear_v: 0.7
+    k2: 1.4 #0.4
+    kp: 1.0 #0.6
+    ki: 0.5 #0.5
+    kd: 0.3 #0.5
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
