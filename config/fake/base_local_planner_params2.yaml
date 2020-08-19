@@ -84,4 +84,4 @@ ADDWAPlannerROS:
     k2: 0.4
     kp: 0.8
     ki: 0.5
-    kd: 0.8
+    kd: 0.2
