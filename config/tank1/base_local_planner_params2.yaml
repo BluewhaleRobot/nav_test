@@ -68,7 +68,7 @@ ADDWAPlannerROS:
     forward_width: 0.45
     rot_width: 0.6
     plan_width: 0.4
-    PathChange: true
+    PathChange: false
     PathChangeLazy: true
     forward_max_dist: 1.4
     backtime: 3.0
