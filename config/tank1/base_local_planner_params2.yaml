@@ -125,14 +125,14 @@ ADDWAPlannerROS:
     # localgridmap half cells num of echo side
     half_length: 100
     # the min distance between base_footprint and bar
-    bar_distance_min: 0.6
+    bar_distance_min: 0.7
 
     using_laserscan: true
     #laserscan_topic: scan
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [0.2,0.]
+    T_laserscan: [0.26,0.]
 
     decay_value: 10
     add_value: 20
@@ -141,7 +141,7 @@ ADDWAPlannerROS:
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
-    forward_width: 0.5
+    forward_width: 0.42
     rot_width: 0.6
     plan_width: 0.4
     PathChange: false
