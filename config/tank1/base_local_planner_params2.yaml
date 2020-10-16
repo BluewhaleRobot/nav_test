@@ -43,7 +43,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R: [1., 0., 0., 0., 1., 0., 0., 0., 1.0]
     # transform trasition vector
-    T: [0.15,0.,0.]
+    T: [0.1,0.,0.]
     # localgridmap cell size
     resolution: 0.05
     # localgridmap half cells num of echo side
@@ -65,10 +65,10 @@ ADDWAPlannerROS:
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
-    forward_width: 0.45
-    rot_width: 0.5
+    forward_width: 0.5
+    rot_width: 0.7
     plan_width: 0.45
-    PathChange: true
+    PathChange: false
     PathChangeLazy: true
     forward_max_dist: 1.4
     backtime: 2.5

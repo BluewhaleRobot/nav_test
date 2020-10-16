@@ -1,5 +1,5 @@
 footprint: [ [-0.35, -0.25], [0.2, -0.25], [0.2, 0.25], [-0.35, 0.25] ]
-robot_radius: 0.4
+robot_radius: 0.45
 # footprint_padding: 0.1
 
 # inflation_radius: 0.5
