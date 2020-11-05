@@ -18,6 +18,6 @@
     <rosparam file="$(find nav_test)/config/tank1/base_global_planner_params.yaml" command="load" />
     <remap from="/odom" to="/xqserial_server/Odom" />
     <remap from="/cmd_vel" to="/cmd_vel_nav" />
-    <remap from="/scan" to="/scan_filtered" />
+    <remap from="/scan" to="/scan_filtered1" />
   </node>
 </launch>
