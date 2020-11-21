@@ -92,7 +92,7 @@ ADDWAPlannerROS:
     max_rot_vel: 0.5
     min_rot_vel: -0.5
 
-    yaw_goal_tolerance: 0.07
+    yaw_goal_tolerance: 0.08
     xy_goal_tolerance: 0.1
     latch_xy_goal_tolerance: true
 
@@ -154,13 +154,13 @@ ADDWAPlannerROS:
     clear_value: 2
     scan_type: 0
 
-    look_ahead_dist: 0.6
+    look_ahead_dist: 0.8
     theta_max: 2.0
-    linear_v: 0.6
+    linear_v: 0.8
     k2: 0.8
     kp: 0.8
     ki: 0.5
-    kd: 0.5
+    kd: 0.0
 
 # DWAPlannerROS:
 #   acc_lim_x: 1.2
