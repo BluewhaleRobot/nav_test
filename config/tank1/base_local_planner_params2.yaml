@@ -132,7 +132,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R_laserscan: [-1., 0., 0., -1.]
     # transform trasition vector
-    T_laserscan: [0.28,0.]
+    T_laserscan: [0.17,0.]
 
     decay_value: 10
     add_value: 20
@@ -141,8 +141,8 @@ ADDWAPlannerROS:
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.25
-    forward_width: 0.5
-    rot_width: 0.7
+    forward_width: 0.55
+    rot_width: 0.6
     plan_width: 0.4
     PathChange: false
     PathChangeLazy: true
@@ -154,10 +154,10 @@ ADDWAPlannerROS:
     clear_value: 5
     scan_type: 0
 
-    look_ahead_dist: 0.4
-    theta_max: 1.2
-    linear_v: 0.5
-    k2: 0.8
+    look_ahead_dist: 0.5
+    theta_max: 1.8
+    linear_v: 0.7
+    k2: 1.4
     kp: 0.8
     ki: 0.5
     kd: 0.3
