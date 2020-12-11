@@ -154,9 +154,9 @@ ADDWAPlannerROS:
     clear_value: 2
     scan_type: 0
 
-    look_ahead_dist: 0.8
+    look_ahead_dist: 0.5
     theta_max: 2.0
-    linear_v: 0.8
+    linear_v: 0.5
     k2: 0.8
     kp: 0.8
     ki: 0.5
