@@ -92,8 +92,8 @@ ADDWAPlannerROS:
     max_rot_vel: 0.7
     min_rot_vel: -0.7
 
-    yaw_goal_tolerance: 0.087
-    xy_goal_tolerance: 0.1
+    yaw_goal_tolerance: 0.08
+    xy_goal_tolerance: 0.05
 
     sim_time: 2.0
     sim_granularity: 0.05
@@ -140,7 +140,7 @@ ADDWAPlannerROS:
     left_side_weight: 0.1
     path_costheta: -0.5 #120 degree
     forward_dist: 0.32
-    forward_width: 0.55
+    forward_width: 0.5
     rot_width: 0.9  #rot_flag
     plan_width: 0.5 #plan needed free radius
     forward_max_dist: 1.8 #the largest distance begin to check
