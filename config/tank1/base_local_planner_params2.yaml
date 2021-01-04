@@ -129,7 +129,7 @@ ADDWAPlannerROS:
     using_laserscan: true
     #laserscan_topic: scan
     # transform rotation matrix
-    R_laserscan: [-1., 0., 0., -1.]
+    R_laserscan: [0., 1., -1., 0.]
     # transform trasition vector
     T_laserscan: [0.1,0.]
 
