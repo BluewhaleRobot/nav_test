@@ -1,4 +1,5 @@
 <launch>
+  <include file="$(find realsense2_camera)/launch/rs_camera_xiaoqiang.launch" />
   <include file="$(find ORB_SLAM2)/launch/run_multi.launch" />
   <node pkg="system_monitor" type="orb_track.py" name="odomServ" >
     <param name="enableMoveFlag" value="true"/>

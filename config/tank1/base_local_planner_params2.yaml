@@ -119,7 +119,7 @@ ADDWAPlannerROS:
     # transform rotation matrix
     R: [1., 0., 0., 0., 1., 0., 0., 0., 1.0]
     # transform trasition vector
-    T: [0.0,0.,0.]
+    T: [0.25,0.,0.]
     # localgridmap cell size
     resolution: 0.05
     # localgridmap half cells num of echo side
@@ -134,7 +134,7 @@ ADDWAPlannerROS:
     # transform trasition vector
     T_laserscan: [0.2,0.]
 
-    decay_value: 10
+    decay_value: 0
     add_value: 20
 
     distance_scale: 1.8
