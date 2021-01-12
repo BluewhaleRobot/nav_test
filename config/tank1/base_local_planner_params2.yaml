@@ -134,7 +134,7 @@ ADDWAPlannerROS:
     # transform trasition vector
     T_laserscan: [0.2,0.]
 
-    decay_value: 0
+    decay_value: 5
     add_value: 20
 
     distance_scale: 1.8
